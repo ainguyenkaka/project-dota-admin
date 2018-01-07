@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Maps</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Maps</h1>
+	<a href="/map/new"><button>New Map</button></a>
+	<table border="1">
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+				<th>Image</th>
+					<th>Source</th>
+		</tr>
+		<tr th:each="map : ${maps}">
+			<td th:text="${map.id}"></td>
+			<td th:text="${map.name}"></td>
+			<td th:text="${map.imgUrl}"></td>
+			<td th:text="${map.sourceUrl}"></td>
+			<td><a th:href="@{'/map/update/' + ${map.id}}">update</a></td>
+			<td><a th:href="@{'/map/del/' + ${map.id}}">delete</a></td>
+
+		</tr>
+	</table>
+</body>
+</html>

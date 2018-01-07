@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Update Map</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<form action="/map/update" method="POST">
+		<input type="number" name="id" placeholder="ID" th:value="${map.id}" readonly=""/>
+			<input type="text" name="name" placeholder="name" th:value="${map.name}"/>
+			<input type="text" name="imgUrl" placeholder="Image URL" th:value="${map.imgUrl}"/>
+			<input type="text" name="sourceUrl" placeholder="Source URL" th:value="${map.sourceUrl}"/>
+			<button type="submit">Update</button>
+	</form>
+</body>
+</html>

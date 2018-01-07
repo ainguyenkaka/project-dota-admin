@@ -1,0 +1,9 @@
+---
+applications:
+- name: dota
+  memory: 512M
+  instances: 1
+  random-route: true
+  host: youngkaka-first
+  domain: cfapps.io
+  path: target/dota-0.0.1-SNAPSHOT.jar
